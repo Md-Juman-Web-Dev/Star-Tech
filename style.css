@@ -883,3 +883,48 @@ footer {
   margin: 0;
   color: #666;
 }
+
+
+
+
+/* navigation bar */
+
+.sub_parent{
+  z-index: 100;
+  position: relative;
+}
+.sub_child{
+  position: absolute;
+  /* top: 44px; */
+  visibility: hidden;
+  background: #fff;
+  width: auto;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  transition: 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+}
+.sub_child li{
+  padding: 0px 15px;
+}
+.sub_parent ul{
+  display: flex;
+  flex-direction: column;
+}
+.sub_parent:hover .sub_child{
+  visibility: visible;
+}
+.nav-ber li{
+  position: relative;
+}
+.nav-ber li::after{
+  content: '';
+  width: 0;
+  height: 2px;
+  position: absolute;
+  background: var(--hover-color);
+  bottom: 10px;
+  left: 0;
+  transition: 0.5s;
+}
+.nav-ber li:hover::after{
+  width: 100%;
+}
